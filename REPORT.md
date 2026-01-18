@@ -81,6 +81,39 @@
 
 ---
 
+### Пример промпта, получаемого моделью
+
+```text
+You are given a set of string slots with fixed lengths and explicit intersection constraints.
+Each intersection constraint enforces character equality between two slots at given indices.
+
+Rules:
+1) Choose exactly ONE candidate string for each slot.
+2) The chosen string must be from that slot's candidate list.
+3) All indices are 0-based.
+4) All intersection constraints must hold simultaneously.
+5) There is exactly ONE globally correct assignment.
+
+Output format (STRICT):
+- Your entire response MUST follow the system format with <reasoning> and <answer>.
+- Inside <answer>, output ONLY a valid JSON object mapping slot_id -> chosen_string.
+- Do NOT include markdown, code fences, or extra text inside <answer>.
+
+Slots:
+- S0: length=12, candidates=['mazoagkylozw', 'seqmkqjvtarw']
+- S1: length=13, candidates=['vsstyroakijrz', 'tnrajbcmywwvd']
+- S2: length=13, candidates=['iviwwvfgkywxo', 'veagjedshpjfh']
+- S3: length=11, candidates=['rskjjudqrpv', 'eigmqlljjrf']
+- S4: length=11, candidates=['fsdsdjemzwn', 'chokbmvbbxq']
+
+Intersections (0-based indices):
+- S0[10] == S1[12]
+- S2[6] == S4[0]
+- S1[9] == S2[0]
+- S0[9] == S2[12]
+- S1[1] == S3[1]
+```
+
 ## Соответствие значений гиперпараметров уровням сложности
 
 | Difficulty | #Slots | Avg. Intersections / Slot | Candidates / Slot | Distractors (d0 / d1) per slot / d2 |
