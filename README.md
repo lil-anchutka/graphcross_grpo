@@ -70,7 +70,7 @@ task_graphcross/
 
 Код обучения и полные логи экспериментов представлены в Google Colab ноутбуке:
 
-**[Colab link here]**
+**https://colab.research.google.com/drive/1M7tQ5NPoAtgDG1M5al11VtexCnv-UGa_?authuser=4#scrollTo=TLhNVcGkQu2o**
 
 Ноутбук содержит:
 - генерацию датасетов,
