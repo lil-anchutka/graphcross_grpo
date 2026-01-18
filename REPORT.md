@@ -3,7 +3,7 @@
 В данном отчете описывается постановка задачи, реализация среды, процесс обучения LLM-агента с использованием reinforcement learning, а также анализ причин, по которым обучение не привело к росту качества.
 
 Ноутбук с кодом обучения и логами доступен по ссылке:  
-**https://colab.research.google.com/drive/10a_xu-kM63V7H8R_BA2ThZVOeNO2uyhT?authuser=4#scrollTo=ftXHaGTW3OvH**
+**https://drive.google.com/file/d/10a_xu-kM63V7H8R_BA2ThZVOeNO2uyhT/view?usp=sharing**
 
 ---
 
