@@ -12,21 +12,48 @@
 ## Структура репозитория
 
 ```
-
-.
-├── games/
-│   └── graph_cross/
-│       ├── env.py            # Реализация среды (Env)
-│       ├── verifier.py       # Логика проверки ответа (Verifier)
-│       ├── prompt.py         # Шаблон промпта задачи (на английском)
-│       └── generator.py      # Генерация задач и датасетов
+task_graphcross/
+├── src/
+│   ├── base/
+│   │   ├── env.py              # Базовая RL-среда / абстракции (используются trainer’ом)
+│   │   ├── data.py             # Data класс
+│   │   ├── verifier.py         # Базовый verifier (общая логика проверки)
+│   │   └── __init__.py
+│   │
+│   └── graphcross/
+│       ├── __init__.py
+│       ├── graphcross.py       # Реализация среды GraphCross:
+│       │                      # генерация задач, логика 
+│       ├── datasets.py         # Dataset-классы (train / eval) для GraphCross
+│       ├── graphcross_prompt.py# шаблон формата задачи
+│       └── graphcross_verifier.py
+│                              # Проверка корректности решения (reward / correctness)
 │
 ├── data/
-│   ├── train/                # Обучающие датасеты
-│   └── test/                 # Фиксированные тестовые датасеты
+│   └── eval/                   # Eval-наборы (jsonl с задачами)
 │
-├── REPORT.md                 # Подробный отчет о решении и экспериментах
-├── README.md                 # Краткое описание проекта
+├── notebooks/
+│   └── experiment.ipynb        # Исследовательский ноутбук (запуски, отладка)
+│
+├── outputs_graphcross_stage1/
+│   ├── checkpoint-400/         # Чекпоинт GRPO обучения (первый в двухэтапном обучении)
+│   ├── checkpoint-600/
+│   └── README.md               # Описание результатов stage1
+│
+├── graphcross_grpo_stage1_lora/
+│   ├── adapter_model.safetensors # LoRA-адаптер (результат обучения)
+│   ├── adapter_config.json
+│   ├── tokenizer.json
+│   ├── tokenizer_config.json
+│   ├── vocab.json
+│   ├── merges.txt
+│   ├── added_tokens.json
+│   ├── special_tokens_map.json
+│   ├── chat_template.jinja
+│   └── README.md               # Как использовать обученный адаптер
+│
+├── README.md                   # Общее описание проекта
+├── REPORT.md                   # Главный аналитический отчет
 └── .gitignore
 
 ```
