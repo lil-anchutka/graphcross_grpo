@@ -1,0 +1,19 @@
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# HuggingFace / caches
+.cache/
+wandb/
+runs/
+outputs/
+*.log
+
+# Model files
+*.safetensors
+*.bin
+*.pt
+
+# OS
+.DS_Store
