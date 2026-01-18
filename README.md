@@ -15,9 +15,9 @@
 task_graphcross/
 ├── src/
 │   ├── base/
-│   │   ├── env.py              # Базовая RL-среда / абстракции (используются trainer’ом)
-│   │   ├── data.py             # Data класс
-│   │   ├── verifier.py         # Базовый verifier (общая логика проверки)
+│   │   ├── env.py             
+│   │   ├── data.py          
+│   │   ├── verifier.py         
 │   │   └── __init__.py
 │   │
 │   └── graphcross/
